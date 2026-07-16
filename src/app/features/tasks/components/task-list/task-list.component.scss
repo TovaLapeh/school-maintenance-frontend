@@ -1,0 +1,21 @@
+.task-list-card {
+  padding: 16px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.spinner-row,
+.empty-state {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.task-table {
+  width: 100%;
+}

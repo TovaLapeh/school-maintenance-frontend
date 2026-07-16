@@ -1,0 +1,18 @@
+<mat-card class="details-card" *ngIf="task">
+  <div class="details-header">
+    <h3>{{ task.title }}</h3>
+    <button mat-icon-button (click)="close.emit()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <p><strong>קטגוריה:</strong> {{ getCategoryLabel(task.category) }}</p>
+  <p><strong>תיאור:</strong> {{ task.description }}</p>
+  <p><strong>סטטוס:</strong> {{ getStatusLabel(task.status) }}</p>
+  <p><strong>עדיפות:</strong> {{ getPriorityLabel(task.priority) }}</p>
+  <p *ngIf="task.location"><strong>מיקום:</strong> {{ task.location }}</p>
+  <p *ngIf="task.estimatedCost"><strong>עלות משוערת:</strong> {{ task.estimatedCost }}</p>
+  <p *ngIf="task.supplier"><strong>ספק:</strong> {{ task.supplier }}</p>
+  <p *ngIf="task.dueDate"><strong>תאריך יעד:</strong> {{ task.dueDate | date: 'dd/MM/yyyy' }}</p>
+  <p><strong>נוצר:</strong> {{ task.createdDate | date: 'dd/MM/yyyy' }}</p>
+</mat-card>

@@ -1,0 +1,29 @@
+.tasks-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-header {
+  text-align: right;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.page-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+}
+
+.toolbar-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-panel,
+.details-panel {
+  margin-top: 12px;
+}

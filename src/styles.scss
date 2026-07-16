@@ -2,13 +2,15 @@
 
 :root {
   color-scheme: light;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
 html, body {
   height: 100%;
   margin: 0;
   background: #f5f7fb;
+  direction: rtl;
+  text-align: right;
 }
 
 body {
@@ -33,4 +35,11 @@ mat-sidenav {
 
 .active-link {
   background: rgba(63, 81, 255, 0.1);
+}
+
+mat-form-field,
+mat-card,
+button,
+mat-tab-group {
+  text-align: right;
 }

@@ -1,0 +1,74 @@
+<mat-card class="task-form-card">
+  <h3>{{ task ? 'עריכת משימה' : 'הוספת משימה' }}</h3>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="task-form">
+    <mat-form-field appearance="outline">
+      <mat-label>קטגוריה</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="PURCHASE">רכש</mat-option>
+        <mat-option value="REPAIR">תיקונים</mat-option>
+        <mat-option value="RENOVATION">שיפוצים</mat-option>
+        <mat-option value="ORGANIZATION">סדר וארגון</mat-option>
+        <mat-option value="CLEANING">ניקיון</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ getFieldLabel() }}</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>תיאור</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <div class="row-fields">
+      <mat-form-field appearance="outline">
+        <mat-label>סטטוס</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="NEW">חדש</mat-option>
+          <mat-option value="IN_PROGRESS">בטיפול</mat-option>
+          <mat-option value="COMPLETED">הושלם</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>עדיפות</mat-label>
+        <mat-select formControlName="priority">
+          <mat-option value="LOW">נמוכה</mat-option>
+          <mat-option value="MEDIUM">בינונית</mat-option>
+          <mat-option value="HIGH">גבוהה</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="row-fields">
+      <mat-form-field appearance="outline">
+        <mat-label>מיקום</mat-label>
+        <input matInput formControlName="location" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>עלות משוערת</mat-label>
+        <input matInput type="number" formControlName="estimated_cost" />
+      </mat-form-field>
+    </div>
+
+    <div class="row-fields">
+      <mat-form-field appearance="outline">
+        <mat-label>ספק</mat-label>
+        <input matInput formControlName="supplier" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>תאריך יעד</mat-label>
+        <input matInput formControlName="due_date" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-actions">
+      <button mat-stroked-button type="button" (click)="cancel()">ביטול</button>
+      <button mat-flat-button color="primary" type="submit">שמירה</button>
+    </div>
+  </form>
+</mat-card>

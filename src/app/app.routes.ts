@@ -3,8 +3,12 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/users',
+    redirectTo: '/tasks',
     pathMatch: 'full'
+  },
+  {
+    path: 'tasks',
+    loadComponent: () => import('./features/tasks/components/tasks-page/tasks-page.component').then((m) => m.TasksPageComponent)
   },
   {
     path: 'users',
