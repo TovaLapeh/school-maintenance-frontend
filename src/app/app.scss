@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.app-shell {
+  height: 100vh;
+}
+
+.sidenav-header {
+  padding: 1.5rem 1rem 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sidenav-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.sidenav-header p {
+  margin: 0.25rem 0 0;
+  color: #6b7280;
+}
+
+.toolbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.content-area {
+  padding: 24px;
+  background: #f5f7fb;
+  min-height: calc(100vh - 64px);
+}
+
+.active-link {
+  background: rgba(63, 81, 255, 0.1);
+}

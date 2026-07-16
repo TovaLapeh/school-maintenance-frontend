@@ -1,0 +1,36 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  color-scheme: light;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #f5f7fb;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.app-shell {
+  height: 100vh;
+}
+
+mat-sidenav {
+  width: 260px;
+}
+
+.toolbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.content-area {
+  padding: 24px;
+}
+
+.active-link {
+  background: rgba(63, 81, 255, 0.1);
+}
